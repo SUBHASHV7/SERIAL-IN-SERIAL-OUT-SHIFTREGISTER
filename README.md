@@ -39,21 +39,35 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **PROGRAM**
 
-![443497145-246e8473-79ee-445a-905e-4a3cef0cf84a](https://github.com/user-attachments/assets/6a8df841-8996-40a8-8088-4c91f9b3c787)
-
-
 Developed by: SUBHASH V
 
 RegisterNumber: 212224240163
 
+```
+module ex10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+```
+
 **RTL LOGIC FOR SISO Shift Register**
 
-![443497271-f61ab4a8-c61d-40ab-9c9b-9f8436a3c71a](https://github.com/user-attachments/assets/1bdd41c6-ac4a-4f70-a6a0-39cd7191578d)
+![442644387-0733b824-3d74-4a9d-8ef3-9cde60a622e7](https://github.com/user-attachments/assets/80b52909-3798-4ff4-9053-0f46b593a2c0)
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 
-![443497205-dbb9116d-8643-4f01-8521-2c0b414b7e1f](https://github.com/user-attachments/assets/4fc57e62-89d5-4bea-8586-b2e0f0542423)
+![442644559-631b1f35-2317-4662-bc1e-9fcaafc65e59](https://github.com/user-attachments/assets/7de4e634-735a-489d-8b76-87bda1ff04a8)
 
 **RESULTS**
 
+Thus implemented a SISO Shift Register using verilog and validated their functionality using their functional tables.
 Thus,SISO Shift Register using verilog and validating their functionality using their functional tables has successful execution of the program.
